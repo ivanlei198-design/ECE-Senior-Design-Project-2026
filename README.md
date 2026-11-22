@@ -3,8 +3,7 @@
 Local AI Agent Using Open-Source LLM: a free, fully local, private multi-agent AI that analyzes
 the security of Linux (Ubuntu) computers over SSH.
 
-Senior Design Project, Electrical and Computer Engineering,
-Cal Poly Pomona, Fall 2026.
+Senior Design Project | Electrical and Computer Engineering | Cal Poly Pomona | Fall 2026.
 
 ## Overview
 - Runs entirely on your own computer with Ollama and Llama3 8B. No cloud, no paid API.
