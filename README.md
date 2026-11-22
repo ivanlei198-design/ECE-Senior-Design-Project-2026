@@ -24,6 +24,7 @@ Cal Poly Pomona, Fall 2026.
 
 Audit reports are framed around a compliance framework (CIS, NIST CSF, ISO 27001,
 SOC 2, PCI DSS or HIPAA) chosen for the computer being audited.
+Type `help` in the agent to see the full list.
 
 ## How it works
 ```mermaid
