@@ -54,7 +54,8 @@ flowchart TD
 - An Ubuntu machine or VM with SSH enabled
 
 ## Setup
-    cd agent
+    cd jarvis
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
     .\scripts\setup.ps1 
     .\scripts\launch.ps1
 
