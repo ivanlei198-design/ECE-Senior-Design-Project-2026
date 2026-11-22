@@ -1,6 +1,6 @@
 # ECE-Senior-Design-Project-2026
 
-SDP Agentic AI: a free, fully local, private multi-agent AI that analyzes
+Local AI Agent Using Open-Source LLM: a free, fully local, private multi-agent AI that analyzes
 the security of Linux (Ubuntu) computers over SSH.
 
 Senior Design Project, Electrical and Computer Engineering,
@@ -87,12 +87,12 @@ Type `y` when asked, then press Ctrl+C.
 ## Built With
 | | |
 |---|---|
-| Laptop | _(model)_ |
+| Laptop | ROG Zephyrus G15|
 | Graphics card | NVIDIA RTX 3070 (laptop) |
-| RAM | _(fill in)_ GB |
+| RAM | 16 GB |
 | Operating system | Windows 11 |
 | AI model | Llama3 8B, served by Ollama |
-| Language | Python _(your version)_ |
+| Language | Python 3.14 |
 | Test target | Ubuntu in a VMware virtual machine (NAT network) |
 | SSH | PuTTY plink |
 | Python packages | requests, matplotlib, pandas, numpy |
