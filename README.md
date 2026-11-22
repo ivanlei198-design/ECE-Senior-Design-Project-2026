@@ -84,7 +84,12 @@ On the Ubuntu machine, turn on SSH and find its IP address:
 ### Setup
 Click the green **Code** button on this page, then **Download ZIP**.
 Right-click the downloaded file, choose **Extract All**, then open the extracted folder.
-Open PowerShell in the unzipped folder and run:
+Open PowerShell in the unzipped folder or open PowerShell from the Start menu (press the Windows key, type `PowerShell`, press Enter)
+and go to the `jarvis` folder with `cd` and the path to where you extracted it:
+
+    cd C:\Users\yourname\Downloads\ECE-Senior-Design-Project-2026-main\jarvis
+
+Then run the setup commands below.
 
 First time only:
 
@@ -99,8 +104,17 @@ Start the agent:
 
 Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
 
-Next time, open PowerShell in the `jarvis` folder and only run the `launch.ps1` line.
-If you get a "running scripts is disabled" error, run the `Set-ExecutionPolicy` line first in the same window.
+### Next time
+Setup is only needed once. To start the agent again, open PowerShell, go to the `jarvis` folder, and run:
+
+    cd C:\Users\yourname\Downloads\ECE-Senior-Design-Project-2026-main\jarvis
+    .\scripts\launch.ps1
+    
+If you open PowerShell in the `jarvis` folder, only run the `launch.ps1` line.
+
+If PowerShell says running scripts is disabled, run this first in the same window:
+
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 ### Connect to your Ubuntu machine
 Connect once so Windows trusts the SSH key of the machine. Type `y` when asked, then press Ctrl+C:
