@@ -53,8 +53,15 @@ flowchart TD
 2. [Python](https://www.python.org/downloads/) 3.10 or newer. Tick "Add Python to PATH" during install.
 3. [Ollama](https://ollama.com), the program that runs the AI model on your computer.
 4. [PuTTY](https://www.putty.org) (includes `plink`, which the agent uses for SSH).
-5. An Ubuntu computer or virtual machine to audit, with SSH turned on
-   (on the Ubuntu machine: `sudo apt install openssh-server`).
+5. An Ubuntu computer or virtual machine to audit, such as a free VMware or VirtualBox VM.
+   Ubuntu asks you to pick a username and password during install. The agent uses those.
+   The security features need this machine. The other features work without one.
+
+### Prepare the Ubuntu machine
+On the Ubuntu machine, turn on SSH and find its IP address:
+
+    sudo apt install openssh-server
+    hostname -I
 
 ### Setup
 Click the green **Code** button on this page, then **Download ZIP**, and unzip it.
@@ -67,23 +74,23 @@ Open PowerShell in the unzipped folder and run:
     .\scripts\launch.ps1
 
 Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
-Only need to run .\scripts\setup.ps1 once
+Only need to run .\scripts\setup.ps1 once. The next time you want to launch the agent you can skip .\scripts\setup.ps1.
 
-### Try it
-    run security audit
-    security audit 192.168.1.50
+### Connect to your Ubuntu machine
+Connect once so Windows trusts the machine's SSH key. Type `y` when asked, then press Ctrl+C:
 
-The first time you audit a computer, the agent asks for its SSH password.
-Before the first audit, connect once to trust the computer's SSH key:
+    plink -ssh yourusername@your-ip
 
-    plink -ssh username@192.168.1.50
+Then run an audit with your own IP and username:
 
-Type `y` when asked, then press Ctrl+C.
+    security audit your-ip user yourusername
+
+The agent asks for the Ubuntu password (the same one you use to log in to that machine).
+It can save it on your computer only. It is never uploaded.
 
 ### Troubleshooting
 - "No answer on port 22": the Ubuntu machine is off, has a new IP (check with `hostname -I`), or SSH isn't running.
 - Type `help` in the agent to see all commands.
-
 ## Built With
 | | |
 |---|---|
