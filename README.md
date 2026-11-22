@@ -117,7 +117,7 @@ It can save it on your computer only. It is never uploaded.
 | RAM | 16 GB |
 | Operating system | Windows 11 |
 | AI model | Llama3 8B, served by Ollama |
-| Language | Python 3.14 |
+| Language | Python 3.11.9 |
 | Test target | Ubuntu in a VMware virtual machine (NAT network) |
 | SSH | PuTTY plink |
 | Python packages | requests, matplotlib, pandas, numpy |
