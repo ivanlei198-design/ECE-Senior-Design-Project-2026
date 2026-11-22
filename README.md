@@ -16,7 +16,7 @@ Cal Poly Pomona, Fall 2026.
 | You type | What happens |
 |---|---|
 | `run security audit` | Opens two new terminals: one runs the audit, one watches it and restarts it if it fails. Your main terminal stays free. |
-| `security audit 192.168.48.130` | Audits a different computer. Results are cached per computer. |
+| `security audit 192.168.1.50` | Audits a different computer. Results are cached per computer. |
 | a plain question, like "what is a firewall" | Answered directly by the local model. |
 | a monitoring request | Checks the VM's performance, ports, users and logins over SSH. |
 | a GPU request | Samples your GPU and draws a graph of utilization, memory, temperature and power. |
@@ -46,23 +46,56 @@ flowchart TD
 3. For a security audit, the audit runs in its own terminal and a third terminal watches it, restarts it on failure (up to 3 attempts), and reports status.
 4. Everything stays on your machine: the model, the memory and the reports.
 
-## Requirements
-- Windows 11 with PowerShell
-- Python 3.10 or newer
-- Ollama with the llama3 model (`ollama pull llama3`)
-- plink (from PuTTY) for SSH
-- An Ubuntu machine or VM with SSH enabled
+## Getting Started
 
-## Setup
+### What you need
+1. A Windows 11 computer. An NVIDIA graphics card helps but isn't required.
+2. [Python](https://www.python.org/downloads/) 3.10 or newer. Tick "Add Python to PATH" during install.
+3. [Ollama](https://ollama.com), the program that runs the AI model on your computer.
+4. [PuTTY](https://www.putty.org) (includes `plink`, which the agent uses for SSH).
+5. An Ubuntu computer or virtual machine to audit, with SSH turned on
+   (on the Ubuntu machine: `sudo apt install openssh-server`).
+
+### Setup
+Click the green **Code** button on this page, then **Download ZIP**, and unzip it.
+Open PowerShell in the unzipped folder and run:
+
+    ollama pull llama3
     cd jarvis
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
-    .\scripts\setup.ps1 
+    .\scripts\setup.ps1
     .\scripts\launch.ps1
 
-only need to run the setup once
+Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
 
-## Documentation
-See the `docs/` folder.
+### Try it
+    run security audit
+    security audit 192.168.1.50
+
+The first time you audit a computer, the agent asks for its SSH password.
+Before the first audit, connect once to trust the computer's SSH key:
+
+    plink -ssh username@192.168.1.50
+
+Type `y` when asked, then press Ctrl+C.
+
+### Troubleshooting
+- "No answer on port 22": the Ubuntu machine is off, has a new IP (check with `hostname -I`), or SSH isn't running.
+- Type `help` in the agent to see all commands.
+
+## Built With
+| | |
+|---|---|
+| Laptop | _(model)_ |
+| Graphics card | NVIDIA RTX 3070 (laptop) |
+| RAM | _(fill in)_ GB |
+| Operating system | Windows 11 |
+| AI model | Llama3 8B, served by Ollama |
+| Language | Python _(your version)_ |
+| Test target | Ubuntu in a VMware virtual machine (NAT network) |
+| SSH | PuTTY plink |
+| Python packages | requests, matplotlib, pandas, numpy |
+| Storage | SQLite (memory) and local files (cache) |
 
 ## Responsible use
 See [SECURITY.md](SECURITY.md).
