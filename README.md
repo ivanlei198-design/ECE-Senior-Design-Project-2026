@@ -57,6 +57,23 @@ flowchart TD
    Ubuntu asks you to pick a username and password during install. The agent uses those.
    The security features need this machine. The other features work without one.
 
+## Use your own computer
+The agent starts with my test machine saved as its default. Tell it to use yours:
+
+    set vm your-ip user yourusername
+
+For example:
+
+    set vm 192.168.1.50 user alice
+
+- `your-ip` is the Ubuntu machine's address. Find it by running `hostname -I` on that machine.
+- `yourusername` is the name you log in with on that machine.
+- The agent remembers this, so you only do it once.
+- Type `show vm` at any time to see which computer is selected.
+
+After that, `run security audit` and the monitoring commands use your computer.
+The first time, the agent asks for your Ubuntu password and can save it on your computer only.
+
 ### Prepare the Ubuntu machine
 On the Ubuntu machine, turn on SSH and find its IP address:
 
