@@ -64,7 +64,7 @@ The agent starts with my test machine saved as its default. Tell it to use yours
 
 For example:
 
-    set vm 192.168.1.50 user alice
+    set vm 192.168.1.50 user ivanSDP
 
 - `your-ip` is the Ubuntu machine's address. Find it by running `hostname -I` on that machine.
 - `yourusername` is the name you log in with on that machine.
