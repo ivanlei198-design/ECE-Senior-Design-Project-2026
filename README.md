@@ -67,6 +67,7 @@ Open PowerShell in the unzipped folder and run:
     .\scripts\launch.ps1
 
 Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
+Only need to run the .\scripts\setup.ps1 once
 
 ### Try it
     run security audit
