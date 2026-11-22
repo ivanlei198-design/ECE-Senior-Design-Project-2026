@@ -55,8 +55,10 @@ flowchart TD
 
 ## Setup
     cd agent
-    .\scripts\setup.ps1 (once)
+    .\scripts\setup.ps1 
     .\scripts\launch.ps1
+
+only need to run the setup once
 
 ## Documentation
 See the `docs/` folder.
