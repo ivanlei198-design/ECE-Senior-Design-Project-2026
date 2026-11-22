@@ -81,7 +81,7 @@ On the Ubuntu machine, turn on SSH and find its IP address:
     sudo apt install openssh-server
     hostname -I
 
-### Setup
+## Setup
 Click the green **Code** button on this page, then **Download ZIP**.
 Right-click the downloaded file, choose **Extract All**, then open the extracted folder.
 
