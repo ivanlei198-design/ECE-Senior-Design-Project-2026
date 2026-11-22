@@ -88,7 +88,7 @@ Type `y` when asked, then press Ctrl+C.
 | | |
 |---|---|
 | Laptop | ROG Zephyrus G15|
-| Graphics card | NVIDIA RTX 3070 (laptop) |
+| Graphics card | NVIDIA RTX 3070 |
 | RAM | 16 GB |
 | Operating system | Windows 11 |
 | AI model | Llama3 8B, served by Ollama |
