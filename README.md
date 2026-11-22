@@ -112,7 +112,7 @@ It can save it on your computer only. It is never uploaded.
 | | |
 |---|---|
 | Laptop | ROG Zephyrus G15|
-| Graphics card | NVIDIA RTX 3070 |
+| Graphics card | NVIDIA RTX 3070, 8 GB VRAM  |
 | RAM | 16 GB |
 | Operating system | Windows 11 |
 | AI model | Llama3 8B, served by Ollama |
@@ -121,6 +121,18 @@ It can save it on your computer only. It is never uploaded.
 | SSH | PuTTY plink |
 | Python packages | requests, matplotlib, pandas, numpy |
 | Storage | SQLite (memory) and local files (cache) |
+
+### Hardware
+Tested on the laptop above. Rough guidance for other computers:
+
+| | Minimum | Recommended |
+|---|---|---|
+| RAM | 8 GB | 16 GB |
+| Graphics card | none (runs on the CPU, slower) | NVIDIA with 8 GB VRAM |
+| Free disk space | 10 GB | 10 GB |
+
+The Llama3 8B model is about 5 GB to download. With a graphics card
+it answers in seconds; on the CPU alone it can take a minute or more.
 
 ## Responsible use
 See [SECURITY.md](SECURITY.md).
