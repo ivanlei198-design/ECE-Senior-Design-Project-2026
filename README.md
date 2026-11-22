@@ -51,7 +51,7 @@ flowchart TD
 
 ### What you need
 1. A Windows 11 computer. An NVIDIA graphics card helps but is not required.
-2. [Python](https://www.python.org/downloads/) 3.10 or newer. Make sure to tick "Add Python to PATH" during the install.
+2. [Python](https://www.python.org/downloads/) 3.10 or newer. Make sure to click "Add Python to PATH" during the install.
 3. [Ollama](https://ollama.com), the program that runs the AI model on your computer.
 4. [PuTTY](https://www.putty.org), which includes `plink`. The agent uses it for SSH.
 5. An Ubuntu computer or virtual machine to audit, such as a free VMware or VirtualBox VM.
@@ -133,7 +133,7 @@ It can save it on your computer only, and it is never uploaded.
 | Storage | SQLite (memory) and local files (cache) |
 
 ### Hardware
-This was tested on the laptop above. Rough guidance for other computers:
+This was tested on the laptop above. Rough guide for other computers:
 
 | | Minimum | Recommended |
 |---|---|---|
