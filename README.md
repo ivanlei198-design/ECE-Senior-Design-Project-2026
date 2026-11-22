@@ -56,7 +56,7 @@ flowchart TD
 4. [PuTTY](https://www.putty.org), which includes `plink`. The agent uses it for SSH.
 5. An Ubuntu computer or virtual machine to audit, such as a free VMware or VirtualBox VM.
    Ubuntu asks you to pick a username and password during the install, and the agent uses those.
-   The security features need this machine. The other features work without one.
+   The security features need this machine. The other features work without one. The Ubuntu machine must be powered on (and, if it's a VM, running) when you run a security audit.
 
 ### Use your own computer
 The agent starts with my test machine saved as the default. Tell it to use yours:
