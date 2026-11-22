@@ -84,37 +84,49 @@ On the Ubuntu machine, turn on SSH and find its IP address:
 ### Setup
 Click the green **Code** button on this page, then **Download ZIP**.
 Right-click the downloaded file, choose **Extract All**, then open the extracted folder.
-Open PowerShell in the unzipped folder or open PowerShell from the Start menu (press the Windows key, type `PowerShell`, press Enter)
-and go to the `jarvis` folder with `cd` and the path to where you extracted it:
 
-    cd C:\Users\yourname\Downloads\ECE-Senior-Design-Project-2026-main\jarvis
+#### Step 1: Open PowerShell in the `jarvis` folder
 
-Then run the setup commands below.
+Option A: from the folder
+1. In File Explorer, open the extracted folders until you are inside the `jarvis` folder.
+2. Right-click an empty space (not on a file) and choose **Open in Terminal**.
+3. If it opens something other than PowerShell, click the address bar at the top of File Explorer, type `powershell` and press Enter instead.
 
-First time only:
+Option B: from the Start menu
+1. Press the Windows key, type `PowerShell` and press Enter.
+2. Go to the `jarvis` folder with `cd` and the path to it:
 
-    ollama pull llama3
-    cd jarvis
+       cd C:\Users\yourname\Downloads\ECE-Senior-Design-Project-2026-main\jarvis
+
+   Replace `yourname` and the folder names with your own. To get the exact path, open the
+   `jarvis` folder in File Explorer, click the address bar, copy the path, and paste it after `cd `.
+
+Type `dir` to check. You should see `scripts`, `agents` and `SDP Agentic AI.py`.
+
+#### Step 2: First time only
+Run these one at a time:
+
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
     .\scripts\setup.ps1
 
-Start the agent:
+The first setup downloads the AI model (about 5 GB), so it takes a few minutes.
 
+#### Step 3: Start the agent
     .\scripts\launch.ps1
 
 Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
 
 ### Next time
-Setup is only needed once. To start the agent again, open PowerShell, go to the `jarvis` folder, and run:
+Setup is only needed once. To start the agent again, open PowerShell in the `jarvis` folder
+the same way as in Step 1 and run:
 
-    cd C:\Users\yourname\Downloads\ECE-Senior-Design-Project-2026-main\jarvis
     .\scripts\launch.ps1
-    
-If you open PowerShell in the `jarvis` folder, only run the `launch.ps1` line.
 
 If PowerShell says running scripts is disabled, run this first in the same window:
 
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+If the agent says it can't reach Ollama, open the Ollama app from the Start menu and try again.
 
 ### Connect to your Ubuntu machine
 Connect once so Windows trusts the SSH key of the machine. Type `y` when asked, then press Ctrl+C:
