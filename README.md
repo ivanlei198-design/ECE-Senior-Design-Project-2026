@@ -85,14 +85,21 @@ Click the green **Code** button on this page, then **Download ZIP**.
 Right-click the downloaded file and choose **Extract All**, then open the extracted folder.
 Open PowerShell in the unzipped folder and run:
 
+First time only:
+
     ollama pull llama3
     cd jarvis
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
     .\scripts\setup.ps1
+
+Start the agent:
+
     .\scripts\launch.ps1
 
 Wait for `[AGENT ONLINE]`, then type a request at the `You >` prompt.
-Only need to run .\scripts\setup.ps1 once. The next time you want to launch the agent you can skip .\scripts\setup.ps1.
+
+Next time, open PowerShell in the `jarvis` folder and run only the `launch.ps1` line.
+If you get a "running scripts is disabled" error, run the `Set-ExecutionPolicy` line first in the same window.
 
 ### Connect to your Ubuntu machine
 Connect once so Windows trusts the machine's SSH key. Type `y` when asked, then press Ctrl+C:
@@ -109,6 +116,7 @@ It can save it on your computer only. It is never uploaded.
 ### Troubleshooting
 - "No answer on port 22": the Ubuntu machine is off, has a new IP (check with `hostname -I`), or SSH isn't running.
 - Type `help` in the agent to see all commands.
+
 ## Built With
 | | |
 |---|---|
