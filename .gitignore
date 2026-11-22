@@ -1,0 +1,9 @@
+ai_env/
+__pycache__/
+*.pyc
+*.db
+logs/
+data/cache/
+generated_code/
+*.pdf
+.env
