@@ -81,7 +81,8 @@ On the Ubuntu machine, turn on SSH and find its IP address:
     hostname -I
 
 ### Setup
-Click the green **Code** button on this page, then **Download ZIP**, and unzip it.
+Click the green **Code** button on this page, then **Download ZIP**.
+Right-click the downloaded file and choose **Extract All**, then open the extracted folder.
 Open PowerShell in the unzipped folder and run:
 
     ollama pull llama3
