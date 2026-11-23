@@ -15,7 +15,7 @@ Senior Design Project | Computer Engineering | Cal Poly Pomona | Fall 2026
 | You type | What happens |
 |---|---|
 | `run security audit` | Opens two new terminals. One runs the audit and the other watches it and restarts it if it fails. The main terminal stays free to use. |
-| `security audit 192.168.1.50` | Audits a different computer. The results are saved for each computer. |
+| `security audit your-ip` | Audits a different computer. The results are saved for each computer. |
 | a plain question, like "what is a firewall" | The local model answers it directly. |
 | a monitoring request | Checks the VM's performance, ports, users and logins over SSH. |
 | a GPU request | Measures the GPU and draws a graph of utilization, memory, temperature and power. |
