@@ -1,7 +1,7 @@
 # ECE-Senior-Design-Project-2026
 
 Local AI Agent Using an Open-Source LLM. This is a free, fully local, private multi-agent AI that
-checks the security of Linux (Ubuntu) computers over SSH.
+checks the security of Linux (Ubuntu) computers over SSH. It can also be used as a regular chatbot to answer questions, write code and analyze data.
 
 Senior Design Project | Computer Engineering | Cal Poly Pomona | Fall 2026
 
