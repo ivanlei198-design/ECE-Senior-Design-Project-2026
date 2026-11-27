@@ -171,7 +171,18 @@ The Llama 3 8B model is about 5 GB to download. With a graphics card
 it answers in a few seconds, but on the CPU alone it can take a minute or more.
 
 ## Responsible use
+The security reports are written by an AI model. They can be wrong or miss problems, so a person should check them before acting on them. They are not a compliance certification or a replacement for a professional security audit.
+
 See [SECURITY.md](SECURITY.md).
+
+## Privacy
+The agent runs fully on your computer. Your prompts, SSH details and reports are not sent to any outside server. Passwords are not stored in the code, and email alerts only work if you set the email settings yourself as environment variables.
 
 ## License
 MIT. See [LICENSE](LICENSE).
+
+This project uses other software that has its own license:
+- Llama 3 8B by Meta, under the Meta Llama 3 Community License. The model is not included in this repository. It is downloaded separately through Ollama with `ollama pull llama3`. Built with Meta Llama 3.
+- Ollama (MIT) runs the model on your computer.
+- PuTTY plink (MIT-style license) is used for SSH on Windows.
+- The Python packages installed by `scripts/setup.ps1` (requests, pandas, numpy, matplotlib, playwright, rich, langchain-ollama, langchain-community) each have their own licenses.
